@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata = {
   title: "White Board",
@@ -10,7 +16,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressContentEditableWarning={true}
-      className={`h-full antialiased`}
+      className={`${inter.variable} font-sans h-full antialiased bg-background dark`}
     >
       <body className="min-h-full">{children}</body>
     </html>
